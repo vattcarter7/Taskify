@@ -1,3 +1,3 @@
-# Getting Started with Create React App
+### TODO App
 
 > Task app built with typescript and react
