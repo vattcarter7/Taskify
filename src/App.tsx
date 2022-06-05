@@ -8,7 +8,7 @@ import { Todo } from "./models/models";
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Array<Todo>>([]);
-  const [CompletedTodos, setCompletedTodos] = useState<Array<Todo>>([]);
+  const [completedTodos, setCompletedTodos] = useState<Array<Todo>>([]);
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
@@ -37,7 +37,7 @@ const App: React.FC = () => {
 
     let add;
     let active = todos;
-    let complete = CompletedTodos;
+    let complete = completedTodos;
     // Source Logic
     if (source.droppableId === "TodosList") {
       add = active[source.index];
@@ -66,7 +66,7 @@ const App: React.FC = () => {
         <TodoList
           todos={todos}
           setTodos={setTodos}
-          CompletedTodos={CompletedTodos}
+          completedTodos={completedTodos}
           setCompletedTodos={setCompletedTodos}
         />
       </div>

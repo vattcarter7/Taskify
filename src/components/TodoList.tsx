@@ -7,13 +7,13 @@ interface props {
   todos: Array<Todo>;
   setTodos: React.Dispatch<React.SetStateAction<Array<Todo>>>;
   setCompletedTodos: React.Dispatch<React.SetStateAction<Array<Todo>>>;
-  CompletedTodos: Array<Todo>;
+  completedTodos: Array<Todo>;
 }
 
 const TodoList: React.FC<props> = ({
   todos,
   setTodos,
-  CompletedTodos,
+  completedTodos,
   setCompletedTodos,
 }) => {
   return (
@@ -49,10 +49,10 @@ const TodoList: React.FC<props> = ({
             }`}
           >
             <span className="todos__heading">Completed Tasks</span>
-            {CompletedTodos?.map((todo, index) => (
+            {completedTodos?.map((todo, index) => (
               <SingleTodo
                 index={index}
-                todos={CompletedTodos}
+                todos={completedTodos}
                 todo={todo}
                 key={todo.id}
                 setTodos={setCompletedTodos}
